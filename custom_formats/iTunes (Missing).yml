@@ -5,13 +5,17 @@ description: 'Matches ''iTunes'' WEB-DLs that are not labelled correctly. Matche
 tags:
 - Streaming Service
 - WEB-DL
-- WEB3 [1080p]
 conditions:
 - name: WEB-DL
   negate: false
   required: true
   source: web_dl
   type: source
+- name: iPT Internals
+  negate: false
+  pattern: iPT Internals
+  required: true
+  type: release_group
 - name: WEBRip
   negate: true
   required: true
@@ -77,11 +81,6 @@ conditions:
   pattern: Roku
   required: true
   type: release_title
-- name: iPT Internals
-  negate: false
-  pattern: iPT Internals
-  required: true
-  type: release_group
 - name: iTunes Regex
   negate: true
   pattern: iTunes
